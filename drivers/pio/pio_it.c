@@ -35,15 +35,16 @@
  *        Headers
  *----------------------------------------------------------------------------*/
 
-#include "config.h"
 #include "pio_it.h"
-#include "pio.h"
 
+#include "pio.h"
+#include <pmc/pmc.h>
+#include "bricklib/utility/trace.h"
+#include <cmsis/core_cm3.h>
+#include "config.h"
 #include <assert.h>
 #include <stddef.h>
-#include <pmc/pmc.h>
 
-#include "bricklib/utility/trace.h"
 /*----------------------------------------------------------------------------
  *        Local definitions
  *----------------------------------------------------------------------------*/
