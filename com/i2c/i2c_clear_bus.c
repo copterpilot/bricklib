@@ -21,8 +21,9 @@
 
 #include "i2c_clear_bus.h"
 
-#include "bricklib/drivers/pio/pio.h"
+#include <pio/pio.h>
 #include "bricklib/utility/util_definitions.h"
+#include <cmsis/core_cm3.h>
 
 void i2c_clear_bus_delay(void) {
 	SLEEP_US(10);
