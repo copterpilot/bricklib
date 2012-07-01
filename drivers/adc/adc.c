@@ -21,13 +21,13 @@
 
 #include "adc.h"
 
-#include <stdio.h>
-#include "config.h"
-
 #include "bricklib/utility/led.h"
 #include "bricklib/utility/util_definitions.h"
 #include "bricklib/drivers/tc/tc.h"
 #include "bricklib/drivers/flash/flashd.h"
+#include <cmsis/core_cm3.h>
+#include "config.h"
+#include <stdio.h>
 
 int16_t adc_offset = 0;
 int16_t adc_gain = ADC_MAX_VALUE;
