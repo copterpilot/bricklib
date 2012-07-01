@@ -21,13 +21,10 @@
 
 #include "bricklet_init.h"
 
-#include <string.h>
 #include <flash/flashd.h>
 #include <FreeRTOS.h>
 #include <task.h>
 #include <adc/adc.h>
-#include <pio/pio.h>
-#include <pio/pio_it.h>
 
 #include "bricklib/logging/logging.h"
 #include "bricklib/com/i2c/i2c_eeprom/i2c_eeprom_master.h"
@@ -40,13 +37,15 @@
 
 // Includes for bricklet api
 #include <twi/twid.h> // TWID_Read, TWID_Write
-#include <stdio.h> // printf
 #include <pio/pio.h> // PIO_Configure
 #include <pio/pio_it.h> // PIO_ConfigureIt
 #include "bricklib/drivers/adc/adc.h" // adc_channel_get_data
 #include "bricklib/com/com_messages.h" // get_com_from_type
 #include "bricklib/com/com_common.h" // send_blocking_with_timeout
 #include "bricklib/utility/mutex.h" // mutex_*
+#include <stdio.h> // printf
+#include <string.h>
+#include <cmsis/core_cm3.h>
 
 #define BRICKLET_DEBOUNCE_TICKS 1000
 
