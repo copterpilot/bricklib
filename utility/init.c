@@ -24,7 +24,6 @@
 #include <pio/pio_it.h>
 #include <wdt/wdt.h>
 #include <adc/adc.h>
-
 #include <FreeRTOS.h>
 #include <task.h>
 
@@ -38,6 +37,7 @@
 #include "bricklib/utility/util_definitions.h"
 #include "bricklib/logging/logging.h"
 #include "bricklib/bricklet/bricklet_init.h"
+#include <cmsis/core_cm3.h>
 
 #include "config.h"
 
